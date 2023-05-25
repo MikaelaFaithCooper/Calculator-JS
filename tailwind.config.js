@@ -6,11 +6,11 @@ tailwind.config = {
         'terracotta' : '#d15252',
         'frenchbeige' : '#c2a676',
         'liver' : '#4d4d4d',
+        'outerspace' : '#454545',
+        'taupe' : '#ad9468',
 
       },
       fontFamily: {
-          // 'dotgothic16': ['DotGothic16', 'sans-serif'],
-          // 'orbitron': ['Orbitron', 'sans-serif'],
           'digital7reg': ['Digital7Reg', 'sans-serif']
       },
     }
