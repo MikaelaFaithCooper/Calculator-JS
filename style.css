@@ -15,3 +15,9 @@
     font-size: 2em;
     font-weight: bold;
 }
+
+@media (min-width: 640px) {
+  .calbtn {
+    font-size: 32px;
+  }
+}

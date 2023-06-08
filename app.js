@@ -1,31 +1,35 @@
-function insert(num) 
-{
-    document.answerBox.answerOutput.value = document.answerBox.answerOutput.value + num;
+function insert(num) {
+    let answerOutput = document.getElementById("result");
+    let currentExpression = answerOutput.value;
+
+    if (currentExpression === "" && (num === "+" || num === "*" || num === "÷" || num === ".")) {
+        return;
+    }
+
+    if (isOperator(currentExpression[currentExpression.length - 1]) && isOperator(num)) {
+        answerOutput.value = currentExpression.slice(0, -1) + num;
+    } else {
+        answerOutput.value += num;
+    }
 }
 
-function equal()
-{
-    let x = document.answerBox.answerOutput.value;
-    let y;
+function equal() {
+    let answerOutput = document.getElementById("result");
+    let expression = answerOutput.value;
+    let result;
     try {
-    y = eval(x)
+        result = eval(expression);
     } catch (error) {
-        answerBox.answerOutput.value='Syntax error'
-    return;
+        result = 'Syntax error';
+    }
+    answerOutput.value = result;
 }
 
-document.getElementById("result").value = y 
-
+function backspace() {
+    let answerOutput = document.getElementById("result");
+    answerOutput.value = answerOutput.value.slice(0, -1);
 }
 
-
-function backspace()
-{
-    var exp = document.answerBox.answerOutput.value;
-    document.answerBox.answerOutput.value = exp.substring(0, exp.length - 1);
-}
-
-function percentage()
-{
-  return (document.answerBox.answerOutput.value/num)*100;
+function isOperator(char) {
+    return ['+', '-', '*', '÷', '.'].includes(char);
 }

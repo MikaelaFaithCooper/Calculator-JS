@@ -15,16 +15,16 @@
     <script src="app.js"></script>
 
 <!-- Answer Display -->
-    <div> 
+    <div class="2xl:w-[25vw] lg:w-[45vw] md:w-[55vw] sm:w-[75vw]"> 
         <main>
-            <form name="answerBox" class="border-[5px] bg-[#262626] border-black h-[10vh] align-middle">
-                <input name="answerOutput" type="text" id="result" class="text-[60px] bg-[#262626] text-[#10a30b] font-digital7reg text-right" style="pointer-events: none;"></input>
+            <form name="answerBox" class="border-[5px] bg-[#262626] border-black h-[100px] align-middle">
+                <input name="answerOutput" type="text" id="result" class="w-full text-[60px] bg-[#262626] text-[#10a30b] font-digital7reg text-right" style="pointer-events: none;"></input>
             </form>
         </main>
 <!-- Numbers and Functions -->
         <section class="mt-[2vh]">
             <div class="grid grid-cols-4 gap-4">
-                <input type="button" class="calbtn bg-terracotta hover:bg-[#bd4848] col-span-2" value="AC" onclick ="answerBox.answerOutput.value=' '"></input>
+                <input type="button" class="calbtn bg-terracotta hover:bg-[#bd4848] col-span-2" value="AC" onclick="answerBox.answerOutput.value=' '"></input>
                 <input type="button" class="calbtn bg-frenchbeige text-black hover:bg-taupe" value="←" onclick="backspace()"></input>
                 <input type="button" class="calbtn bg-frenchbeige text-black hover:bg-taupe" value="÷" onclick="insert('÷')"></input>
             
@@ -43,8 +43,8 @@
                 <input type="button" class="calbtn bg-liver hover:bg-outerspace" value="3" onclick="insert(3)"></input>
                 <input type="button" class="calbtn bg-frenchbeige text-black hover:bg-taupe" value="+" onclick="insert('+')"></input>
 
-                <input type="button" class="calbtn bg-liver" value="0" onclick="insert(0)"></input>
-                <input type="button" class="calbtn bg-liver hover:bg-[#ad9468]" value="•" onclick="insert('.')"></input>
+                <input type="button" class="calbtn bg-liver hover:bg-outerspace" value="0" onclick="insert(0)"></input>
+                <input type="button" class="calbtn bg-liver hover:bg-outerspace" value="•" onclick="insert('.')"></input>
                 <input type="button" class="calbtn bg-frenchbeige text-black col-span-2 hover:bg-taupe" value="=" onclick="equal()"></input>
             </div>
         </section>
